@@ -2,7 +2,7 @@
 
 ## 📝 My Notes:
 
-1. Basic Implementation of redux
+### 1. Basic Implementation of redux
 
 ```jsx
 // Main four working parts of redux: Store, Actions, Reducers, Dispatch
@@ -43,7 +43,7 @@ counterStore.dispatch(increment());
 counterStore.dispatch(increment());
 ```
 
-2. Using React DevTools
+### 2. Using React DevTools
 
 Install the [chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) and add this line of code to when you create your store.
 
@@ -54,7 +54,7 @@ let store = createStore(
 );
 ```
 
-3. Combining two reducers into one store.
+### 3. Combining two reducers into one store.
 
 You can't put two separate reducers to the same store. You need to use `combineReducers` to do this
 
@@ -70,7 +70,7 @@ const allReducers = combineReducers({
 let store = createStore(allReducers);
 ```
 
-4. Using redux with react with react-redux and the `<Provider />` component
+### 4. Using redux with react with react-redux and the `<Provider />` component
 
 ```js
 // Import the Provider
@@ -96,7 +96,7 @@ ReactDOM.render(
 
 In the case of NextJS, just find where the app component is being rendered and wrap the Provider with the store there.
 
-5. Reading the value of a state with react-redux and the `useSelector` hook.
+### 5. Reading the value of a state with react-redux and the `useSelector` hook.
 
 ```js
 // Import useSelector
@@ -110,7 +110,7 @@ const AnyComponentHere = () => {
 // stateValue now represents a state so you can render it or use it like any state in React.
 ```
 
-6. Manipulating the value of the state with react-redux and the `useDispatch` hook.
+### 6. Manipulating the value of the state with react-redux and the `useDispatch` hook.
 
 Before you manipulate any values, make sure you have defined your actions already, preferably in their own separate files so you can import them to any component easily.
 
