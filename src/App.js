@@ -29,7 +29,7 @@ function App() {
         </button>
 
         {isLogged ? (
-          <h3>Wow you are logged in</h3>
+          <h3>You are currently logged in</h3>
         ) : (
           <h3>You are currently logged out</h3>
         )}
