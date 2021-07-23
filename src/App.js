@@ -15,7 +15,7 @@ function App() {
         <h1>Counter: {counter}</h1>
         <button
           onClick={() => {
-            dispatch(decrement());
+            dispatch(decrement(5));
           }}
         >
           - Decrement
