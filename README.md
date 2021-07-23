@@ -130,4 +130,47 @@ const AnyComponentHere = () => {
 }
 ```
 
-## 🤩🙌 That's pretty much what I learned so far with Redux. Yay! 🎉🎉
+### 7. Adding parameters to actions.
+
+So apparently... "Actions" are just plain javascript objects with mainly the property: `type`.
+But! It can also have other properties that you could use to your advantage.
+By convention, just use the `payload` property to the action and assign the parameter from the action to that.
+
+```js
+// Defining the action
+export const increment = (byNumber) => {
+  return {
+    type: "INCREMENT",
+    payload: byNumber,
+  };
+};
+
+export const decrement = (byNumber) => {
+  return {
+    type: "DECREMENT",
+    payload: byNumber,
+  };
+};
+
+// Defining the reducer
+const counterReducer = (state = 0, action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return state + (action.payload ? action.payload : 1);
+    case "DECREMENT":
+      return state - (action.payload ? action.payload : 1);
+    default:
+      return state;
+  }
+};
+
+// Dispatching the action
+dispatch(increment(5));
+```
+
+---
+
+```
+🤩🙌 That's pretty much what I learned so far with Redux. Yay! 🎉🎉
+🏃‍♂️💨 Keep Going
+```
