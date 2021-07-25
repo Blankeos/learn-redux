@@ -6,5 +6,5 @@ Following this tutorial: https://www.youtube.com/watch?v=uymkMrlbAR8
 
 ## 📝 Notes
 
-[x] Learned a couple things on a reliable folder structure for stores, actions, and reducers.
-[x] Learned how to structure types on typescript
+[/] Learned a couple things on a reliable folder structure for stores, actions, and reducers.
+[/] Learned how to struture types on typescript

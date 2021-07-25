@@ -8,6 +8,7 @@ import {
   SET_LISTID_TO_DELETE,
   SET_LIST_TO_EDIT,
   DELETE_LIST,
+  UPDATE_LIST,
 } from "../types";
 
 const initialState: ListState = {
@@ -78,6 +79,17 @@ export default (state = initialState, action: ListsAction): ListState => {
         ...state,
         lists: clonedListsfromLS2,
       };
+
+    case UPDATE_LIST:
+      const clonedListsFromLS3 = { ...listsFromLS };
+      clonedListsFromLS3[action.payload.id].name = action.payload.name;
+      saveListstoLS(clonedListsFromLS3);
+      return {
+        ...state,
+        lists: clonedListsFromLS3,
+        listToEdit: null,
+      };
+
     default:
       return state;
   }
