@@ -15,8 +15,20 @@ function App() {
     <div className="App">
       <header>
         <h2>Increment By: {incrementValue}</h2>
-        <button onClick={setIncrementValue((prev) => prev + 1)}>^</button>
-        <button onClick={setIncrementValue((prev) => prev - 1)}>v</button>
+        <button
+          onClick={() => {
+            setIncrementValue((prev) => prev + 1);
+          }}
+        >
+          ^
+        </button>
+        <button
+          onClick={() => {
+            setIncrementValue((prev) => prev - 1);
+          }}
+        >
+          v
+        </button>
         <h1>Counter: {counter}</h1>
         <button
           onClick={() => {
